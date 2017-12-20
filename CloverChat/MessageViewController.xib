@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MessageViewController" customModule="CloverChat" customModuleProvider="target">
+            <connections>
+                <outlet property="messageText" destination="4XJ-tk-HhU" id="xch-ba-L9j"/>
+                <outlet property="sendButton" destination="lin-dS-azP" id="ZfI-zP-AST"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="4XJ-tk-HhU">
+                    <rect key="frame" x="16" y="73" width="343" height="179"/>
+                    <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lin-dS-azP">
+                    <rect key="frame" x="16" y="250" width="343" height="62"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                    <state key="normal" title="Send"/>
+                    <connections>
+                        <action selector="sendTapped:" destination="-1" eventType="touchUpInside" id="O9D-de-M4X"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="4XJ-tk-HhU" firstAttribute="trailing" secondItem="i5M-Pr-FkT" secondAttribute="trailingMargin" id="1fJ-Rb-6LO"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="4XJ-tk-HhU" secondAttribute="bottom" constant="415" id="6cm-8J-I2d"/>
+                <constraint firstItem="lin-dS-azP" firstAttribute="trailing" secondItem="4XJ-tk-HhU" secondAttribute="trailing" id="Jhm-D0-KpX"/>
+                <constraint firstItem="4XJ-tk-HhU" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leadingMargin" id="Lvk-8d-auM"/>
+                <constraint firstItem="lin-dS-azP" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="230" id="at4-IM-JYQ"/>
+                <constraint firstItem="lin-dS-azP" firstAttribute="leading" secondItem="4XJ-tk-HhU" secondAttribute="leading" id="i9k-Yh-C0Y"/>
+                <constraint firstItem="4XJ-tk-HhU" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="53" id="j9z-H7-fFC"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="lin-dS-azP" secondAttribute="bottom" constant="355" id="z3d-4l-Zzp"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="39.5" y="138.5"/>
+        </view>
+    </objects>
+</document>
